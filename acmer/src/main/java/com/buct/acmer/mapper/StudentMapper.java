@@ -3,6 +3,7 @@ package com.buct.acmer.mapper;
 import com.buct.acmer.entity.Student;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * <p>
@@ -14,5 +15,8 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface StudentMapper extends BaseMapper<Student> {
+
+    @Select("select * from student where stu_No = ${stuNo}")
+    Student getBystuNo(String stuNo);
 
 }
