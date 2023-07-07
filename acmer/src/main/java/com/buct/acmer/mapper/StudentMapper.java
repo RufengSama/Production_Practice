@@ -16,7 +16,4 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface StudentMapper extends BaseMapper<Student> {
 
-    @Select("select * from student where stu_No = ${stuNo}")
-    Student getBystuNo(String stuNo);
-
 }
