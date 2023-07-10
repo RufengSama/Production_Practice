@@ -10,11 +10,11 @@ Vue.use(VueRouter)
 
 // 解决在使用ElementUI中的导航时，默认情况下如果重复点击某选项，会报错。
 const originalPush = VueRouter.prototype.push
-VueRouter.prototype.push = function push(location) {
+VueRouter.prototype.push = function push (location) {
   return originalPush.call(this, location).catch(err => err)
 }
 const originalReplace = VueRouter.prototype.replace
-VueRouter.prototype.replace = function replace(location) {
+VueRouter.prototype.replace = function replace (location) {
   return originalReplace.call(this, location).catch(err => err)
 }
 
