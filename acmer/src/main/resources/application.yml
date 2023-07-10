@@ -20,6 +20,7 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     #sql语句显示到控制台
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    id-type: auto
 
 #swagger配置
 config:
