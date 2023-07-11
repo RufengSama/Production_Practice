@@ -16,4 +16,10 @@ public class StudentServiceTestCase {
     void testGet(){
         System.out.println(studentService.getById(2));
     }
+
+    @Test
+    void deleteByName(){
+        String name = "田帅华";
+        System.out.println(studentService.removeByName(name));
+    }
 }

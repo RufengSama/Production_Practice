@@ -2,6 +2,7 @@ package com.buct.acmer.mapper;
 
 import com.buct.acmer.entity.Student;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -16,4 +17,6 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface StudentMapper extends BaseMapper<Student> {
 
+    @Delete("DELETE FROM student where stu_name = #{stuName}")
+    void deleteByName(String stuName);
 }

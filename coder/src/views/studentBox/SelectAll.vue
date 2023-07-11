@@ -1,12 +1,19 @@
 <template>
   <div class="container">
-    <el-table :data="getTableData" stripe border style="width: 100%" :loading="loading">
+    <el-table :data="tableData.slice((currentPage - 1) * pageSize, currentPage * pageSize)" stripe border style="width: 100%" v-loading="loading">
       <el-table-column prop="id" label="id" width="130px">
         <template slot-scope="scope">
-          <span @click="showPopup(scope.row.id)" :style="{ color: getRandomColor(), fontSize: getRandomFontSize() }">{{ scope.row.id }}</span>
+          <span @click="showPopup(scope.row.id)">{{ scope.row.id }}</span>
         </template>
       </el-table-column>
-      <!-- 省略其他el-table-column的代码 -->
+      <el-table-column prop="date" label="date" width="210"></el-table-column>
+      <el-table-column prop="contest" label="contest" width="180px"></el-table-column>
+      <el-table-column prop="rank" label="rank"></el-table-column>
+      <el-table-column prop="performance" label="performance" width="120px"></el-table-column>
+      <el-table-column prop="newRating" label="newRating" width="120px"></el-table-column>
+      <el-table-column prop="diff" label="diff" width="80px"></el-table-column>
+      <el-table-column prop="count" label="count"></el-table-column>
+      <el-table-column prop="maxrating" label="maxrating"></el-table-column>
     </el-table>
     <div class="block">
       <el-pagination
@@ -17,18 +24,14 @@
         @current-change="handleCurrentChange"
       ></el-pagination>
     </div>
-    <el-dialog :visible="popupVisible" @close="closePopup" :custom-class="'image-dialog'">
-      <div class="image-container">
-        <img :src="selectedPersonImage" alt="Person Image" />
-      </div>
-      <!-- 这里可以显示关于该人员的其他附加信息 -->
+    <el-dialog :visible="popupVisible" @close="closePopup">
+      <img :src="selectedPersonImage" alt="Person Image" />
+      <!-- Additional information about the person can be displayed here -->
     </el-dialog>
   </div>
 </template>
-
 <script>
 import axios from 'axios'
-
 export default {
   data () {
     return {
@@ -39,24 +42,15 @@ export default {
       loading: true,
       popupVisible: false,
       selectedPersonId: '',
-      selectedPersonImage: '',
-      colors: ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF'],
-      fontSizes: ['12px', '14px', '16px', '18px', '20px']
+      selectedPersonImage: ''
     }
   },
   created () {
     this.getInfo()
   },
-  computed: {
-    getTableData () {
-      const start = (this.currentPage - 1) * this.pageSize
-      const end = this.currentPage * this.pageSize
-      return this.tableData.slice(start, end)
-    }
-  },
   methods: {
     getInfo () {
-      axios.get('/stu/info/acmer/atcoder/all/1/100').then((res) => {
+      axios.get('/stu/info/acmer/atcoder/all/1/100').then(res => {
         if (res.data.code === 200) {
           this.loading = false
           const msgInfo = res.data.data.records
@@ -81,23 +75,22 @@ export default {
       this.currentPage = val
     },
     showPopup (id) {
+      // Retrieve additional information for the selected person using the id
+      // For example, make an API call to fetch the person's details including the image
+      // Once the data is retrieved, update the selectedPersonId and selectedPersonImage
+      // and set the popupVisible to true to show the popup
       this.selectedPersonId = id
-      this.selectedPersonImage = require('@/assets/image.jpg') // 替换为实际的图片URL或文件路径
+      // Make an API call or retrieve the image URL based on the id
+      this.selectedPersonImage = 'src/assets/image.jpg' // Replace with the actual image URL or file path
       this.popupVisible = true
     },
     closePopup () {
       this.popupVisible = false
-    },
-    getRandomColor () {
-      return this.colors[Math.floor(Math.random() * this.colors.length)]
-    },
-    getRandomFontSize () {
-      return this.fontSizes[Math.floor(Math.random() * this.fontSizes.length)]
+      // Additional cleanup or actions can be performed here when the popup is closed
     }
   }
 }
 </script>
-
 <style scoped>
 .container {
   width: 100%;
@@ -106,7 +99,6 @@ export default {
   border-bottom: #eceef0 solid 2px;
   padding: 0px 18px;
 }
-
 .headBox {
   width: 100%;
   height: 75px;
@@ -114,13 +106,11 @@ export default {
   align-items: center;
   box-sizing: border-box;
 }
-
 .headBox p {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .headBox p span {
   display: inline-block;
   width: 70px;
@@ -128,51 +118,21 @@ export default {
   color: #7a7d7f;
   font-weight: bold;
 }
-
 .headBox p:nth-child(1) span,
 .headBox p:nth-child(2) span {
   margin-right: -10px;
 }
-
 .headBox p:nth-child(2) span,
 .headBox p:nth-child(3) span,
 .headBox button {
   margin-left: 7px;
 }
-
 .headBox button span {
   margin-left: 5px;
 }
-
 .container .block {
   display: flex;
   justify-content: center;
   margin-top: 5px;
-}
-
-.title {
-  font-weight: bold;
-  color: #333;
-}
-
-/* 新增样式 */
-.image-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.image-container {
-  max-width: 100%;
-  max-height: 100%;
-  display: inline-block;
-}
-
-.image-container img {
-  max-width: 100%;
-  max-height: 100%;
-  display: inline-block;
-  vertical-align: middle;
 }
 </style>
