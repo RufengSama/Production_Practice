@@ -22,18 +22,8 @@ const routes = [
   {
     path: '/',
     component: StudentIndex,
-    redirect: '/Register',
+    redirect: '/SelectAll',
     children: [
-      {
-        path: '/SelectAll',
-        name: 'SelectAll',
-        component: SelectAll
-      },
-      {
-        path: '/StuInfo',
-        name: 'StuInfo',
-        component: StuInfo
-      },
       {
         path: '/register',
         name: 'Register',
@@ -43,6 +33,16 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
+      },
+      {
+        path: '/SelectAll',
+        name: 'SelectAll',
+        component: SelectAll
+      },
+      {
+        path: '/StuInfo',
+        name: 'StuInfo',
+        component: StuInfo
       }
     ]
   }
