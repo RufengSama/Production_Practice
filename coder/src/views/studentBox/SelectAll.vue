@@ -1,7 +1,11 @@
 <template>
   <div class="container">
     <el-table :data="tableData.slice((currentPage - 1) * pageSize, currentPage * pageSize)" stripe border style="width: 100%" v-loading="loading">
-      <el-table-column prop="id" label="id" width="130px"></el-table-column>
+      <el-table-column prop="id" label="id" width="130px">
+        <template slot-scope="scope">
+          <span @click="showPopup(scope.row.id)">{{ scope.row.id }}</span>
+        </template>
+      </el-table-column>
       <el-table-column prop="date" label="date" width="210"></el-table-column>
       <el-table-column prop="contest" label="contest" width="180px"></el-table-column>
       <el-table-column prop="rank" label="rank"></el-table-column>
@@ -10,12 +14,6 @@
       <el-table-column prop="diff" label="diff" width="80px"></el-table-column>
       <el-table-column prop="count" label="count"></el-table-column>
       <el-table-column prop="maxrating" label="maxrating"></el-table-column>
-<!--      <el-table-column  label="操作" width="100px">
-      <template slot-scope="scope">
-        <el-button @click="handleEdit(scope.row)" type="text" size="small">编辑</el-button>
-        <el-button @click="handleDel(scope.row)" type="text" size="small">删除</el-button>
-      </template>
-      </el-table-column>-->
     </el-table>
     <div class="block">
       <el-pagination
@@ -26,19 +24,25 @@
         @current-change="handleCurrentChange"
       ></el-pagination>
     </div>
+    <el-dialog :visible="popupVisible" @close="closePopup">
+      <img :src="selectedPersonImage" alt="Person Image" />
+      <!-- Additional information about the person can be displayed here -->
+    </el-dialog>
   </div>
 </template>
-
 <script>
 import axios from 'axios'
 export default {
   data () {
     return {
-      pageSize: 7, // 表示一页多少条数据
+      pageSize: 7,
       totalNum: 0,
       currentPage: 1,
       tableData: [],
-      loading: true
+      loading: true,
+      popupVisible: false,
+      selectedPersonId: '',
+      selectedPersonImage: ''
     }
   },
   created () {
@@ -69,11 +73,24 @@ export default {
     },
     handleCurrentChange (val) {
       this.currentPage = val
+    },
+    showPopup (id) {
+      // Retrieve additional information for the selected person using the id
+      // For example, make an API call to fetch the person's details including the image
+      // Once the data is retrieved, update the selectedPersonId and selectedPersonImage
+      // and set the popupVisible to true to show the popup
+      this.selectedPersonId = id
+      // Make an API call or retrieve the image URL based on the id
+      this.selectedPersonImage = 'src/assets/image.jpg' // Replace with the actual image URL or file path
+      this.popupVisible = true
+    },
+    closePopup () {
+      this.popupVisible = false
+      // Additional cleanup or actions can be performed here when the popup is closed
     }
   }
 }
 </script>
-
 <style scoped>
 .container {
   width: 100%;
