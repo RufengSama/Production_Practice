@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.buct.acmer.mapper.StudentMapper;
+import org.apache.ibatis.annotations.Delete;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,28 +17,40 @@ public class StudentEntityTestCase {
     private StudentMapper studentMapper;
 
     @Test
-    void testSave(){
+    void testSave() {
         studentMapper.selectById(1);
     }
 
     @Test
-    //测试分页功能
-    void testGetPage(){
-        IPage page = new Page(2 , 5);
-        studentMapper.selectPage(page , null);
+    void testDelete() {
+        String name = "田帅华";
+        QueryWrapper<Student> qw = new QueryWrapper<>();
+        qw.like("stu_name",name);
+        if(!studentMapper.selectList(qw).isEmpty()){
+            studentMapper.deleteByName(name);
+        }
     }
 
     @Test
-    //按条件查询
-    void testGetBy(){
-        QueryWrapper<Student> qw = new QueryWrapper<>();
-        qw.like("stu_class" , "20");
-        studentMapper.selectList(qw);
+        //测试分页功能
+    void testGetPage() {
+        IPage page = new Page(2, 5);
+        studentMapper.selectPage(page, null);
     }
+
     @Test
-    void testGetBy2(){
+        //按条件查询
+    void testGetBy() {
+        QueryWrapper<Student> qw = new QueryWrapper<>();
+        qw.like("stu_name", "田帅华");
+        studentMapper.selectList(qw);
+
+    }
+
+    @Test
+    void testGetBy2() {
         LambdaQueryWrapper<Student> lqw = new LambdaQueryWrapper<>();
-        lqw.like(Student::getStuClass,"20");
+        lqw.like(Student::getStuClass, "20");
         studentMapper.selectList(lqw);
     }
 }

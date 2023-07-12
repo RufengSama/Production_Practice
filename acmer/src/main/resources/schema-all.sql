@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS `student` (
-   `stu_no` varchar(255) NOT NULL,
-   `stu_name` varchar(255) DEFAULT NULL,
-   `stu_class` varchar(255) DEFAULT NULL,
-   `stu_ac_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-   `stu_cf_id` varchar(255) DEFAULT NULL,
+   `stu_no` varchar(255) NOT NULL COMMENT 'id',
+   `stu_name` varchar(255) DEFAULT NULL COMMENT '学生姓名',
+   `stu_class` varchar(255) DEFAULT NULL COMMENT '学生班级',
+   `stu_ac_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '学生acid',
+   `stu_cf_id` varchar(255) DEFAULT NULL COMMENT '学生cfid',
    PRIMARY KEY (`stu_no`)
 );
 CREATE TABLE IF NOT EXISTS `atcoder` (
