@@ -10,7 +10,7 @@
 
 2023.07.11  添加了按条件删除信息
 
-2023.07.11  更新codeforces信息，更新atcoder信息
+2023.07.11  更新codeforces信息，更新atcoder信息，根据id删除codeforces信息，根据id删除atcoder信息
 
 
 

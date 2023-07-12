@@ -44,6 +44,18 @@ public class CodeforcesController {
         return new PublicProperty(200,"success",codeforcesService.page(page));
     }
 
+    @ApiOperation("根据id删除Codeforces信息")
+    @ApiImplicitParam(name = "cfId", value = "cfid", required = true)
+    @DeleteMapping ("/remove/id/{cfId}")
+    public PublicProperty delete(@PathVariable("cfId") String cfId) {
+        boolean flag = codeforcesService.removeById(cfId);
+        if (flag) {
+            return new PublicProperty(200, "success", null);
+        } else {
+            return new PublicProperty(400, "failed", null);
+        }
+    }
+
     @ApiOperation("修改学生Codeforces信息")
     @PostMapping("/update")
     public PublicProperty<Codeforces> updateInfo(@RequestBody Codeforces codeforces) {

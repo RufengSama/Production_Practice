@@ -43,6 +43,18 @@ public class AtcoderController {
         return new PublicProperty(200,"success",atcoderService.page(page));
     }
 
+    @ApiOperation("根据id删除Atcoder信息")
+    @ApiImplicitParam(name = "acId", value = "acid", required = true)
+    @DeleteMapping ("/remove/id/{acId}")
+    public PublicProperty delete(@PathVariable("acId") String acId) {
+        boolean flag = atcoderService.removeById(acId);
+        if (flag) {
+            return new PublicProperty(200, "success", null);
+        } else {
+            return new PublicProperty(400, "failed", null);
+        }
+    }
+
     @ApiOperation("修改学生Atcoder信息")
     @PostMapping("/update")
     public PublicProperty<Codeforces> updateInfo(@RequestBody Atcoder atcoder) {
