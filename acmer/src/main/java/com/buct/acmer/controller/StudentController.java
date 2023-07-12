@@ -62,9 +62,8 @@ public class StudentController {
 
     @ApiOperation("根据id删除学生信息")
     @ApiImplicitParam(name = "stuId", value = "学生id", required = true)
-    @DeleteMapping ("/remove/{stuId}")
+    @DeleteMapping ("/remove/id/{stuId}")
     public PublicProperty delete(@PathVariable("stuId") String stuId) {
-
         boolean flag = studentService.removeById(stuId);
         if (flag) {
             return new PublicProperty(200, "success", null);
@@ -75,7 +74,7 @@ public class StudentController {
 
     @ApiOperation("根据姓名删除学生信息")
     @ApiImplicitParam(name = "stuName", value = "学生姓名", required = true)
-    @DeleteMapping("/remove/{stuName}")
+    @DeleteMapping("/remove/name/{stuName}")
     public PublicProperty deleteByName(@PathVariable("stuName") String stuName) {
         boolean flag = studentService.removeByName(stuName);
         if (flag) {
