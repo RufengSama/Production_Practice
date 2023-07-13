@@ -1,5 +1,7 @@
 package com.buct.acmer.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.buct.acmer.entity.Atcoder;
 import com.buct.acmer.entity.ContestInfo;
@@ -13,6 +15,7 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.nio.file.Path;
 
 /**
  * <p>
@@ -43,6 +46,25 @@ public class StudentController {
         return new PublicProperty(200, "success", studentService.page(page));
     }
 
+    @ApiOperation("按姓名查询学生信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "currentPage", value = "当前页数", required = true),
+            @ApiImplicitParam(name = "pageSize", value = "页面大小", required = true),
+            @ApiImplicitParam(name = "stuName", value = "学生姓名", required = true)
+    })
+    @GetMapping("/select/{stuName}/{currentPage}/{pageSize}")
+    public PublicProperty<Page<Student>> selectByName(@PathVariable("currentPage") Integer currentPage,
+                                                      @PathVariable("pageSize") Integer pageSize,
+                                                      @PathVariable("stuName") String stuName) {
+
+        QueryWrapper<Student> qw = new QueryWrapper();
+        qw.like("stuName", stuName);
+        LambdaQueryWrapper<Student> lqw = new LambdaQueryWrapper<>();
+        lqw.like(Student::getStuName, stuName);
+        Page<Student> page = new Page<>(currentPage, pageSize);
+        return new PublicProperty(200, "success", studentService.page(page, lqw));
+    }
+
     @ApiOperation("新增学生信息")
     @PostMapping("/insert")
     public PublicProperty insert(@RequestBody Student student) {
@@ -62,7 +84,7 @@ public class StudentController {
 
     @ApiOperation("根据id删除学生信息")
     @ApiImplicitParam(name = "stuId", value = "学生id", required = true)
-    @DeleteMapping ("/remove/id/{stuId}")
+    @DeleteMapping("/remove/id/{stuId}")
     public PublicProperty delete(@PathVariable("stuId") String stuId) {
         boolean flag = studentService.removeById(stuId);
         if (flag) {

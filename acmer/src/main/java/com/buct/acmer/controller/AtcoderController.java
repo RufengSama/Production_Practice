@@ -43,6 +43,23 @@ public class AtcoderController {
         return new PublicProperty(200,"success",atcoderService.page(page));
     }
 
+    @ApiOperation("新增Atcoder信息")
+    @PostMapping("/insert")
+    public PublicProperty insert(@RequestBody Atcoder atcoder) {
+
+        Atcoder exist = atcoderService.getById(atcoder.getAcId());
+        if (exist == null) {
+            boolean save = atcoderService.save(atcoder);
+            if (save) {
+                return new PublicProperty(200, "success", null);
+            } else {
+                return new PublicProperty(400, "failed", null);
+            }
+        } else {
+            return new PublicProperty(400, "student exist", null);
+        }
+    }
+
     @ApiOperation("根据id删除Atcoder信息")
     @ApiImplicitParam(name = "acId", value = "acid", required = true)
     @DeleteMapping ("/remove/id/{acId}")

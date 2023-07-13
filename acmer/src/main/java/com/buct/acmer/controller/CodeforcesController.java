@@ -44,6 +44,23 @@ public class CodeforcesController {
         return new PublicProperty(200,"success",codeforcesService.page(page));
     }
 
+    @ApiOperation("新增Codeforces信息")
+    @PostMapping("/insert")
+    public PublicProperty insert(@RequestBody Codeforces codeforces) {
+
+        Codeforces exist = codeforcesService.getById(codeforces.getCfId());
+        if (exist == null) {
+            boolean save = codeforcesService.save(codeforces);
+            if (save) {
+                return new PublicProperty(200, "success", null);
+            } else {
+                return new PublicProperty(400, "failed", null);
+            }
+        } else {
+            return new PublicProperty(400, "student exist", null);
+        }
+    }
+
     @ApiOperation("根据id删除Codeforces信息")
     @ApiImplicitParam(name = "cfId", value = "cfid", required = true)
     @DeleteMapping ("/remove/id/{cfId}")
