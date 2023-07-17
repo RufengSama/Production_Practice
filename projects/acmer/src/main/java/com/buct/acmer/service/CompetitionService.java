@@ -1,0 +1,1 @@
+package com.buct.acmer.service;import com.buct.acmer.vo.CompetitionVO;public interface CompetitionService {    CompetitionVO getCompetition();}

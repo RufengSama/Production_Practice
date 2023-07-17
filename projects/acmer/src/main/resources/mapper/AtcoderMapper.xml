@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.buct.acmer.mapper.AtcoderMapper">
+
+    <resultMap id="BaseResultMap" type="com.buct.acmer.entity.Atcoder">
+        <id property="acId" column="ac_id"/>
+        <result property="acDate" column="ac_date"/>
+        <result property="acContest" column="ac_contest"/>
+        <result property="acRank" column="ac_rank"/>
+        <result property="acPerformance" column="ac_performance"/>
+        <result property="acNewRating" column="ac_new_rating"/>
+        <result property="acDiff" column="ac_diff"/>
+        <result property="acCount" column="ac_count"/>
+        <result property="acMaxRating" column="ac_max_rating"/>
+    </resultMap>
+
+</mapper>

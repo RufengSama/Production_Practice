@@ -1,0 +1,1 @@
+package com.buct.spider.service;import com.baomidou.mybatisplus.extension.service.IService;import com.buct.spider.entity.Atcoder;/** * @author * @date 2023-07-16 21:39 */public interface AtcoderService extends IService<Atcoder> {    /**     * 爬取Atcoder比赛数据     */    void atcoderCrawling();}

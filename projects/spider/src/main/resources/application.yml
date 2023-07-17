@@ -1,0 +1,24 @@
+spring:
+  #数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/acmer?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: 123456
+  task:
+    scheduling:
+      pool:
+        ##定时任务线程池中的线程数，默认值1
+        size: 3
+#数据库配置
+mybatis-plus:
+  #设置别名
+  type-aliases-package: com.buct.spider.entity
+  configuration:
+    #驼峰命名
+    map-underscore-to-camel-case: true
+    #sql语句显示到控制台
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#服务器启动端口配置
+server:
+  port: 8090

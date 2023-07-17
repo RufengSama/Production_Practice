@@ -1,0 +1,1 @@
+package com.buct.spider.vo;import lombok.Data;/** * @author * @date 2023-07-16 21:45 */@Datapublic class AtcoderVO {    private String name;    private String type;    private Integer id;    private Integer endTimeStamp;    private Integer startTimeStamp;    private Integer participate;}

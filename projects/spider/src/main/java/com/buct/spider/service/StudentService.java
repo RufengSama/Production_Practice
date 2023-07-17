@@ -1,0 +1,1 @@
+package com.buct.spider.service;import com.baomidou.mybatisplus.extension.service.IService;import com.buct.spider.entity.Student;public interface StudentService extends IService<Student> {    /**     * 学生CodeForces数据爬取     */    void studentCodeForcesCrawling();    /**     * 学生Atcoder数据爬取     */    void studentAtcoderCrawling();}

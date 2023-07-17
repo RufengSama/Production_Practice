@@ -1,0 +1,1 @@
+package com.buct.acmer.vo;import lombok.Data;import java.util.List;/** * @author * @date 2023-07-16 22:38 */@Datapublic class CompetitionVO {    List<Long> atcoderList;    List<Long> codeforcesList;    List<String> dates;}
