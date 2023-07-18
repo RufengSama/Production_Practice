@@ -4,98 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e60e1b2-5818-4698-b16b-aa919b84b3e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../acmer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/doc/update_log.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/AcmerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/config/KSwagger2Config.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/config/MybatisPlusConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/controller/AtcoderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/controller/CodeforcesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/controller/StudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/entity/Atcoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/entity/Codeforces.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/entity/ContestInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/entity/PublicProperty.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/entity/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/mapper/AtcoderMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/mapper/AtcoderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/mapper/CodeforcesMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/mapper/CodeforcesMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/mapper/ContestInfoMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/mapper/ContestInfoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/mapper/StudentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/mapper/StudentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/service/IAtcoderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/service/ICodeforcesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/service/IStudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/service/impl/AtcoderServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/service/impl/CodeforcesServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/java/com/buct/acmer/service/impl/StudentServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/main/resources/schema-all.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/test/java/com/buct/acmer/AcmerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/test/java/com/buct/acmer/entity/StudentEntityTestCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acmer/src/test/java/com/buct/acmer/service/StudentServiceTestCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/.vs/slnx.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/coder.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/assets/image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/views/StudentIndex.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/views/studentBox/Login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/views/studentBox/Register.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/views/studentBox/SelectAll.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/src/views/studentBox/StuInfo.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../coder/vue.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/SpiderApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/atcoder/ATPipeline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/atcoder/ATProcess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/codeforces/GetCfData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/config/MybatisPlusConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/config/ScheduleConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/controller/CodeforcesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/entity/Atcoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/entity/Codeforces.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/entity/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/mapper/AtcoderMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/mapper/AtcoderMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/mapper/CodeforcesMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/mapper/CodeforcesMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/mapper/StudentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/mapper/StudentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/service/ICodeforcesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/service/impl/CodeforcesServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/java/com/buct/spider/util/HttpRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spider/src/test/java/com/buct/spider/SpiderApplicationTests.java" beforeDir="false" />
-    </list>
+    <list default="true" id="3e60e1b2-5818-4698-b16b-aa919b84b3e7" name="Changes" comment="2023-07-17 update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -247,8 +156,16 @@
       <workItem from="1689568890975" duration="327000" />
       <workItem from="1689581032915" duration="1194000" />
       <workItem from="1689583729304" duration="53000" />
-      <workItem from="1689584031558" duration="3922000" />
+      <workItem from="1689584031558" duration="4250000" />
     </task>
+    <task id="LOCAL-00001" summary="2023-07-17 update">
+      <created>1689592524165</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689592524165</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,5 +182,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2023-07-17 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023-07-17 update" />
   </component>
 </project>
