@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3e60e1b2-5818-4698-b16b-aa919b84b3e7" name="Changes" comment="2023-07-18 update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acmer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/acmer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spider/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coder/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/coder/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/src/main/java/com/buct/spider/util/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/spider/src/main/java/com/buct/spider/util/HttpUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +86,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AcmerApplication">
+  <component name="RunManager" selected="npm.serve">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.buct.acmer.Main" />
       <module name="acmer" />
@@ -168,7 +168,7 @@
       <workItem from="1689581032915" duration="1194000" />
       <workItem from="1689583729304" duration="53000" />
       <workItem from="1689584031558" duration="4250000" />
-      <workItem from="1689641416190" duration="747000" />
+      <workItem from="1689641416190" duration="3012000" />
     </task>
     <task id="LOCAL-00001" summary="2023-07-17 update">
       <created>1689592524165</created>
@@ -184,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689641483714</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2023-07-18 update">
+      <created>1689642282268</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689642282268</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
