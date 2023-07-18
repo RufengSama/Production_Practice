@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e60e1b2-5818-4698-b16b-aa919b84b3e7" name="Changes" comment="2023-07-17 update" />
+    <list default="true" id="3e60e1b2-5818-4698-b16b-aa919b84b3e7" name="Changes" comment="2023-07-18 update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acmer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/acmer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/spider/src/main/resources/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,9 +65,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -82,7 +86,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="npm.serve">
+  <component name="RunManager" selected="Spring Boot.AcmerApplication">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.buct.acmer.Main" />
       <module name="acmer" />
@@ -130,6 +134,13 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.serve" />
+      <item itemvalue="Spring Boot.AcmerApplication" />
+      <item itemvalue="Spring Boot.SpiderApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.serve" />
@@ -157,6 +168,7 @@
       <workItem from="1689581032915" duration="1194000" />
       <workItem from="1689583729304" duration="53000" />
       <workItem from="1689584031558" duration="4250000" />
+      <workItem from="1689641416190" duration="747000" />
     </task>
     <task id="LOCAL-00001" summary="2023-07-17 update">
       <created>1689592524165</created>
@@ -165,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689592524165</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2023-07-18 update">
+      <created>1689641483714</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689641483714</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +204,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2023-07-17 update" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023-07-17 update" />
+    <MESSAGE value="2023-07-18 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023-07-18 update" />
   </component>
 </project>
