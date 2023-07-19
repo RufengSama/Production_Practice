@@ -185,7 +185,7 @@ export default {
       })
         .then(() => {
           axios
-            .delete(`/stu/info/api/codeforces/${cid}`)
+            .delete(`/stu/info/api/codeforces/delete/${cid}`)
             .then(() => {
               this.$message.success('删除成功')
               this.search()

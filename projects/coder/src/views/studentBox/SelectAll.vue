@@ -185,7 +185,7 @@ export default {
       })
         .then(() => {
           axios
-            .delete(`/stu/info/api/atcoder/${id}`)
+            .delete(`/stu/info/api/atcoder/delete/${id}`)
             .then(() => {
               this.$message.success('删除成功')
               this.search()
