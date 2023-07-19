@@ -42,7 +42,6 @@
       :title="addDialogTitle"
       :visible.sync="addDialogVisible"
       width="30%"
-      :before-close="resetAddForm"
     >
       <el-form :model="addForm" ref="addForm" label-width="80px">
         <el-form-item label="ID" prop="id">

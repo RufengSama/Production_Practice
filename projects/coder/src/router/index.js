@@ -5,6 +5,7 @@ import SelectAll from '../views/studentBox/SelectAll.vue'
 import Student from '../views/studentBox/Student'
 import Codeforces from '../views/studentBox/Codeforces.vue'
 import Competition from '../views/studentBox/Competition.vue'
+import StudentAnalysis from '../views/studentBox/StudentAnalysis.vue'
 
 Vue.use(VueRouter)
 
@@ -40,6 +41,11 @@ const routes = [{
     path: '/Competition',
     name: 'Competition',
     component: Competition
+  },
+  {
+    path: '/StudentAnalysis',
+    name: 'StudentAnalysis',
+    component: StudentAnalysis
   }
   ]
 }

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.buct.acmer.entity.Codeforces;
 import com.buct.acmer.mapper.CodeforcesMapper;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
  * @author BUCT
  * @since 2022-06-16
  */
-@Api(tags = "Codeforces")
+@Api(value = " Codeforces比赛数据", tags = " Codeforces比赛数据")
 @RestController
 @RequestMapping("/api/codeforces")
 public class CodeforcesController {
@@ -29,6 +30,7 @@ public class CodeforcesController {
      * 分页查询
      */
     @GetMapping("/list")
+    @ApiOperation(value = " Codeforces比赛数据分页", notes = " Codeforces比赛数据分页")
     public Page<Codeforces> list(@RequestParam(defaultValue = "1") int page,
                                  @RequestParam(defaultValue = "10") int limit,
                                  @RequestParam(required = false) String type,
@@ -49,6 +51,7 @@ public class CodeforcesController {
      * 新增
      */
     @PostMapping("/add")
+    @ApiOperation(value = " Codeforces比赛数据新增", notes = " Codeforces比赛数据新增")
     public void add(@RequestBody Codeforces codeforces) {
         Codeforces selectOne = codeforcesMapper.selectOne(new LambdaQueryWrapper<Codeforces>().eq(Codeforces::getCid, codeforces.getCid()));
         if (selectOne == null) {
@@ -63,6 +66,7 @@ public class CodeforcesController {
      * 修改
      */
     @PostMapping("/update")
+    @ApiOperation(value = " Codeforces比赛数据修改", notes = " Codeforces比赛数据修改")
     public void update(@RequestBody Codeforces codeforces) {
         codeforcesMapper.updateById(codeforces);
     }
@@ -71,8 +75,18 @@ public class CodeforcesController {
      * 删除
      */
     @PostMapping("/delete")
+    @ApiOperation(value = " Codeforces比赛数据删除", notes = " Codeforces比赛数据删除")
     public void delete(@RequestParam int cid) {
         codeforcesMapper.deleteById(cid);
+    }
+
+    /**
+     * 详情
+     */
+    @PostMapping("/get")
+    @ApiOperation(value = " Codeforces比赛数据详情", notes = " Codeforces比赛数据详情")
+    public void get(@RequestParam int cid) {
+        codeforcesMapper.selectById(cid);
     }
 
 

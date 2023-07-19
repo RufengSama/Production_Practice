@@ -38,7 +38,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+/**
+ * @author Sean
+ * @createDate 2022/7/20-22:28
+ */
 public class HttpUtil {
 
     private static final Logger log = LoggerFactory.getLogger(HttpUtil.class);

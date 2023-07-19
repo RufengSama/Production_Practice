@@ -5,9 +5,12 @@ import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.buct.acmer.entity.Student;
 import com.buct.acmer.service.IStudentService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@Api(value = "学生数据", tags = "学生数据")
 @RestController
 @RequestMapping("/api/students")
 public class StudentController {
@@ -16,6 +19,7 @@ public class StudentController {
 
     // 查询所有学生（支持分页）
     @GetMapping("/page")
+    @ApiOperation(value = "学生数据分页", notes = "学生数据分页")
     public Page<Student> getAllStudents(@RequestParam(defaultValue = "1") int pageNo,
                                         @RequestParam(defaultValue = "10") int pageSize,
                                         @RequestParam(required = false) String realName,
@@ -48,18 +52,21 @@ public class StudentController {
 
     // 查询指定学生
     @GetMapping("/{stuNo}")
+    @ApiOperation(value = "学生数据详情", notes = "学生数据详情")
     public Student getStudent(@PathVariable String stuNo) {
         return studentService.getStudent(stuNo);
     }
 
     // 新增学生
     @PostMapping("/add")
+    @ApiOperation(value = "学生数据新增", notes = "学生数据新增")
     public void addStudent(@RequestBody Student student) {
         studentService.addStudent(student);
     }
 
     // 修改学生信息
     @PutMapping("/{stuNo}")
+    @ApiOperation(value = "学生数据修改", notes = "学生数据修改")
     public void updateStudent(@PathVariable String stuNo, @RequestBody Student student) {
         student.setStuNo(stuNo);
         studentService.updateStudent(student);
@@ -67,6 +74,7 @@ public class StudentController {
 
     // 删除学生
     @DeleteMapping("/{stuNo}")
+    @ApiOperation(value = "学生数据删除", notes = "学生数据删除")
     public void deleteStudent(@PathVariable String stuNo) {
         studentService.deleteStudent(stuNo);
     }

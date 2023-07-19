@@ -21,4 +21,4 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #服务器启动端口配置
 server:
-  port: 8089
+  port: 8090

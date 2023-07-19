@@ -27,6 +27,10 @@
             <i class="iconfont icon-sousuo2"></i>
             <span slot="title">比赛数据分析</span>
           </el-menu-item>
+          <el-menu-item index="4" @click="studentAnalysis()">
+            <i class="iconfont icon-sousuo2"></i>
+            <span slot="title">学生数据分析</span>
+          </el-menu-item>
         </el-menu>
       </el-col>
     </el-row>
@@ -91,6 +95,11 @@ export default {
     competition () {
       if (this.$route.name !== 'Competition') {
         this.$router.replace({ path: '/Competition' })
+      }
+    },
+    studentAnalysis () {
+      if (this.$route.name !== 'StudentAnalysis') {
+        this.$router.replace({ path: '/StudentAnalysis' })
       }
     }
   }
